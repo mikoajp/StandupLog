@@ -1,4 +1,4 @@
-# DevLog — AI Standup & Progress Tracker
+# StandupLog — AI Standup & Progress Tracker
 
 ![Status](https://img.shields.io/badge/status-phase%200-blue)
 ![Platform](https://img.shields.io/badge/platform-React%20Native-61DAFB)
@@ -27,7 +27,7 @@ DevLog to aplikacja mobilna dla developerów pracujących w Agile/Scrum. Aplikac
 ## 🏗️ Struktura Projektu
 
 ```
-devlog-mobile/
+StandupLog/
 ├── src/
 │   ├── components/    # Reużywalne komponenty UI
 │   ├── screens/       # Ekrany aplikacji
@@ -52,8 +52,8 @@ devlog-mobile/
 
 1. **Klonuj repozytorium**
    ```bash
-   git clone https://github.com/yourusername/devlog-mobile.git
-   cd devlog-mobile
+   git clone https://github.com/yourusername/StandupLog.git
+   cd StandupLog
    ```
 
 2. **Zainstaluj zależności**
@@ -101,13 +101,3 @@ npm run lint:fix
 # Format kodu z Prettier
 npm run format
 ```
-
-## 📄 Licencja
-
-Projekt edukacyjny dla przedmiotów:
-- JP Urządzeń Mobilnych (Kisielewski)
-- Wprowadzenie do Systemów Mobilnych (Lysykh)
-- Projektowanie UI (Kaznodziej)
-
-**Autor:** Mikołaj Micht  
-**Rok:** 2026
