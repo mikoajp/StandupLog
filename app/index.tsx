@@ -12,7 +12,7 @@ export default function Home() {
       </Text>
 
       <View className="bg-green-900/30 px-3 py-1.5 rounded-lg mb-8">
-        <Text className="text-sm text-green-500 font-medium">Faza 1: Foundation Setup ✅</Text>
+        <Text className="text-sm text-green-500 font-medium">Faza 2: Core MVP ✅</Text>
       </View>
 
       <View className="w-full max-w-sm space-y-4">

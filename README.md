@@ -1,45 +1,36 @@
 # StandupLog — AI Standup & Progress Tracker
 
-![Status](https://img.shields.io/badge/status-phase%200-blue)
+![Status](https://img.shields.io/badge/status-phase%202-green)
 ![Platform](https://img.shields.io/badge/platform-React%20Native-61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6)
 
 DevLog to aplikacja mobilna dla developerów pracujących w Agile/Scrum. Aplikacja automatycznie zaciąga commity z GitHub API, pozwala uzupełnić codzienne standupy i generuje tygodniowe podsumowania za pomocą Gemini AI.
 
-## 🚀 Faza 0 — Setup (Aktualny status)
+## 🚀 Faza 1 — Foundation Setup ✅
 
-✅ Repozytorium GitHub z sensowną historią commitów  
 ✅ Projekt Expo + TypeScript  
 ✅ ESLint + Prettier konfiguracja  
 ✅ Struktura folderów projektu  
-⏳ Test w Expo Go na telefonie (iOS)
+✅ Zustand + AsyncStorage Setup
+✅ NativeWind Configuration (Tailwind CSS)
+✅ Expo Router (Tabs)
+
+## 🏗️ Faza 2 — Core MVP — GitHub & Daily (Aktualny status)
+
+✅ Komponenty UI (Button, Input)
+✅ Integracja z GitHub REST API (fetching commits)
+✅ Formularz Daily (Wczoraj / Dziś / Blokery)
+✅ Historia wpisów z cache offline (Zustand)
+⏳ AI Weekly Summary (Gemini) — *W trakcie*
 
 ## 📦 Stack Technologiczny
 
 - **React Native + Expo** (TypeScript)
-- **Expo Router** — nawigacja (tabs + stack + modal) *(planowane)*
-- **Zustand** — zarządzanie stanem globalnym *(planowane)*
-- **NativeWind** — stylowanie (Tailwind dla RN) *(planowane)*
-- **GitHub REST API** — commity, PR-y, issues *(planowane)*
+- **Expo Router** — nawigacja
+- **Zustand** — zarządzanie stanem (z persistencją)
+- **NativeWind** — stylowanie (v4)
+- **GitHub REST API** — auto-import pracy
 - **Gemini API** — AI podsumowania *(planowane)*
-- **Firebase Auth + Firestore** *(planowane)*
-
-## 🏗️ Struktura Projektu
-
-```
-StandupLog/
-├── src/
-│   ├── components/    # Reużywalne komponenty UI
-│   ├── screens/       # Ekrany aplikacji
-│   ├── services/      # API services (GitHub, Gemini, Firebase)
-│   ├── store/         # Zustand store
-│   ├── types/         # TypeScript types i interfaces
-│   ├── utils/         # Utility functions
-│   └── hooks/         # Custom React hooks
-├── assets/            # Obrazy, fonty, ikony
-├── App.tsx            # Root component
-└── app.json           # Expo config
-```
 
 ## 🛠️ Instalacja i Uruchomienie
 
@@ -50,37 +41,30 @@ StandupLog/
 
 ### Kroki
 
-1. **Klonuj repozytorium**
-   ```bash
-   git clone https://github.com/yourusername/StandupLog.git
-   cd StandupLog
-   ```
-
-2. **Zainstaluj zależności**
+1. **Zainstaluj zależności**
    ```bash
    npm install
    ```
 
-3. **Skopiuj plik .env**
+2. **Skopiuj plik .env**
    ```bash
    cp .env.example .env
    ```
    Uzupełnij wartości w pliku `.env` (GitHub token, Gemini API key)
 
-4. **Uruchom aplikację**
+3. **Uruchom aplikację**
    ```bash
    npm start
    ```
-   Zeskanuj QR code w Expo Go na telefonie
 
 ## 📱 Funkcjonalności (Roadmap)
 
 ### MVP (Minimum Viable Product)
-- [ ] Logowanie przez email lub GitHub OAuth
-- [ ] Formularz standup (wczoraj / dziś / blokery)
-- [ ] Auto-import commitów z GitHub API
-- [ ] Historia wpisów z cache offline
+- [x] Formularz standup (wczoraj / dziś / blokery)
+- [x] Auto-import commitów z GitHub API
+- [x] Historia wpisów z cache offline
 - [ ] AI Weekly Summary (Gemini)
+- [ ] Logowanie przez email lub GitHub OAuth *(planowane)*
 
 ### Zaawansowane
 - [ ] Powiadomienia lokalne (daily reminder)
@@ -88,16 +72,3 @@ StandupLog/
 - [ ] Haptic feedback
 - [ ] Animacje (Reanimated)
 - [ ] Ciemny motyw
-
-## 🧪 Testowanie
-
-```bash
-# Uruchom linter
-npm run lint
-
-# Autofix problemów ESLint
-npm run lint:fix
-
-# Format kodu z Prettier
-npm run format
-```
